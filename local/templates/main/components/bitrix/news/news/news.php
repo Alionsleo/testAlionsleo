@@ -15,6 +15,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+$this->SetViewTarget('main_class');
+echo 'main__news';
+$this->EndViewTarget();
 
 if($arParams["USE_FILTER"]=="Y"):
   $APPLICATION->IncludeComponent(

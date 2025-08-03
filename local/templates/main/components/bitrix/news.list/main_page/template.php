@@ -30,7 +30,7 @@ $this->setFrameMode(true);
                 <div class="news__item-content">
                     <h2 class="title"><?echo $arItem["NAME"]?></h2>
                     <p class="date">
-                        <?echo $arItem["DISPLAY_ACTIVE_FROM"]?>
+                        <?echo $arItem["DISPLAY_ACTIVE_FROM"] . ' г.'?>
                     </p>
                 </div>
             </div>

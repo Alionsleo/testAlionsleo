@@ -39,18 +39,4 @@ global $USER;
         false
     );?>
 </header>
-<main>
-<?php
-if ($APPLICATION->GetCurPage(false) != '/') {
-    $APPLICATION->IncludeComponent(
-	"bitrix:breadcrumb", 
-	"inner", 
-	array(
-		"PATH" => "",
-		"SITE_ID" => "s1",
-		"START_FROM" => "0",
-		"COMPONENT_TEMPLATE" => "inner"
-	),
-	false
-);
-} ?>
+<main class="<?php $APPLICATION->ShowViewContent('main_class');?>">
