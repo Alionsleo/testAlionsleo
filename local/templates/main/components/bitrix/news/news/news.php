@@ -18,7 +18,9 @@ $this->setFrameMode(true);
 $this->SetViewTarget('main_class');
 echo 'main__news';
 $this->EndViewTarget();
-
+?>
+<h1 class="news__title">Новости</h1>
+<?php
 if($arParams["USE_FILTER"]=="Y"):
   $APPLICATION->IncludeComponent(
     "bitrix:catalog.smart.filter",
@@ -45,7 +47,6 @@ if($arParams["USE_FILTER"]=="Y"):
     )
 );
 ?>
-<br />
 <?php
 endif;
 $APPLICATION->IncludeComponent(
