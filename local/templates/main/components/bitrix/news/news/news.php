@@ -18,7 +18,20 @@ $this->setFrameMode(true);
 $this->SetViewTarget('main_class');
 echo 'main__news';
 $this->EndViewTarget();
+
+$APPLICATION->IncludeComponent(
+    "bitrix:breadcrumb",
+    "inner",
+    array(
+        "PATH" => "",
+        "SITE_ID" => "s1",
+        "START_FROM" => "0",
+        "COMPONENT_TEMPLATE" => "inner"
+    ),
+    false
+);
 ?>
+
 <h1 class="news__title">Новости</h1>
 <?php
 if($arParams["USE_FILTER"]=="Y"):

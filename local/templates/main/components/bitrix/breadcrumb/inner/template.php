@@ -26,8 +26,6 @@ $strReturn = '';
 
 
 $strReturn .= '<div class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">';
-$LogFile = $_SERVER["DOCUMENT_ROOT"].'/tmp_log.txt';
-file_put_contents($LogFile, 'variable='.print_r($arResult, true)."\n", FILE_APPEND|LOCK_EX);
 $itemSize = count($arResult);
 for($index = 0; $index < $itemSize; $index++)
 {
